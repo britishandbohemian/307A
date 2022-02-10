@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Body Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- Logo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Milonga&display=swap" rel="stylesheet">
+
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <link
+        rel="stylesheet"
+        type="text/css"
+        href="./public/css/style.css"
+      />
+
+    <style>
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            /* Preferred icon size */
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+            color: black;
+            /* Support for all WebKit browsers. */
+            -webkit-font-smoothing: antialiased;
+            /* Support for Safari and Chrome. */
+            text-rendering: optimizeLegibility;
+
+            /* Support for Firefox. */
+            -moz-osx-font-smoothing: grayscale;
+
+            /* Support for IE. */
+            font-feature-settings: 'liga';
+        }
+
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F4F4F4;
+            font-family: "Montserrat";
+            color: black;
+        }
+
+
+
+        .navSec {
+            padding: 10px;
+            background-color: #FFFFFF;
+            width: 100%;
+            position: fixed;
+            top:0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+
+        .navLogo {
+            text-decoration: none;
+            color: black;
+            font-family: 'Milonga';
+            font-size: 20px;
+        }
+
+
+
+        .button {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .BBinputDiv {
+            margin: 2rem 10px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+
+        }
+
+        .BBinputHeader {
+            margin: 10px;
+            color: black;
+        }
+
+        .BBinput {
+            margin: 2rem 0;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            border-bottom: 7px solid black;
+            padding: 8px;
+        }
+
+
+        .BBhr {
+            height: 20px;
+            background-color: black;
+        }
+
+
+        .BBBtn {
+            border-radius: 50%;
+            border: none;
+            height: 50px;
+            width: 50px;
+            color: white;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            place-items: center;
+            place-content: center;
+        }
+
+        .BBinputHeader {
+            margin: 10px 0;
+        }
+
+
+        .navA{
+            font-size: 10px;
+        }
+
+
+        body {
+            background-color: #F4F4F4;
+            font-family: "Montserrat";
+            color: black;
+            height: 100vh;
+        }
+
+        
+
+    .navSec {
+        padding: 10px;
+        background-color: #FFFFFF;
+        position: fixed;
+        z-index:1000;
+        left:0;
+    }
+    </style>
+
+    <script>
+
+
+function AddItem(){
+    window.location = 'home.html'
+}
+
+    </script>
+
+    <!-- <script src="app.js"></script> -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <section class="navSec">
+        <nav class="nav">
+            <a class="navA"  href="index.html"><span class="material-icons">
+                    chevron_left
+                </span>
+            </a>
+            <a class="navLogo" href="">Feed</a>
+        </nav>
+    </section>
+
+    <!-- Main -->
+    <section class="container-fluid d-flex justify-content-center p-3 flex-column secMain ">
+
+        <!-- input Div -->
+        <div class="BBinputDiv">
+            <h5 class="BBinputHeader">
+                Name
+            </h5>
+            <input id="name" title="Name" placeholder="" class="BBinput" type="text">
+        </div>
+
+                <!-- input Div -->
+                <div class="BBinputDiv">
+                    <h5 class="BBinputHeader">
+                        Why
+                    </h5>
+                    <input id="name" title="Name" placeholder="" class="BBinput" type="text">
+                </div>
+
+
+                        <!-- input Div -->
+        <div class="BBinputDiv">
+            <h5 class="BBinputHeader">
+                Date Due
+            </h5>
+            <input id="name" title="Name" placeholder="" class="BBinput" type="text">
+        </div>
+
+        <!-- Done btn -->
+        <div class="button">
+            <button class="BBBtn" onclick="AddItem()"><span class="material-icons" style="color: white;">
+                    done
+                </span>
+            </button>
+        </div>
+
+    </section>
+
+
+</body>
+
+
+</html>
