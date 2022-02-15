@@ -24,18 +24,15 @@ var arrItems = [{
     "DateDue": "Once A week"
   },
   {
-    "Name": "Find out about all your modules",
-    "Why": "in order to accomplish my goals",
+    "Name": "Group Work with Gang",
+    "Why": "To share knowledge and study together",
     "DateAdded": "Today",
-    "DateDue": "Next Month"
+    "DateDue": "Never"
   },
-  {
-    "Name": "Drivers License",
-    "Why": "in order to accomplish my goals",
-    "DateAdded": "Today",
-    "DateDue": "Next Month"
-  }
+
 ];
+
+// export arrItems = arrItems;
 
 function ItemClick() {
 window.location = "view.html"
@@ -57,7 +54,7 @@ style="display:grid; flex-direction:column;  color:white;padding: 10px 0px 0px 0
 style="padding-left:10px;font-size: 15px;margin-bottom: 10px;font-weight: 100;font-family: 'Montserrat';">${element.Why}
 </h2>
 <!-- Line -->
-<hr style="width: 100%;background-color: #71bfff;color:#71bfff ;height: 10px;">
+<hr style="width: 100%;background-color: #71bfff;color:#71bfff ;height: 10px;margin:10px 0;">
 
 </div>
 
