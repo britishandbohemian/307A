@@ -1,114 +1,192 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <!-- Materia;l IOcons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Body Font -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" crossorigin>
+	<title>View</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
 
-    <!-- Logo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Milonga&display=swap" rel="stylesheet">
+	<style>
+		.parallax {
+			/* The image used */
+			background-image: url("./assets/images/imageAdland.png");
 
+			/* Set a specific height */
+			min-height: 60vh;
 
+			/* Create the parallax scrolling effect */
+			background-attachment: fixed;
+			background-position: top left;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width:100vw;
+		}
+	</style>
 
-    <!-- <script src="js/index.js"></script> -->
-
-    <link rel="stylesheet" type="text/css" href="./public/css/style.css" />
-    <title>View Goals</title>
 
 </head>
 
 
 
-<body id="bodyTag">
 
 
-    <!-- Navbar -->
-    <section class="navSec">
-        <nav class="nav">
-            <a class="navA" href="home.html"><span class="material-icons">
-                    chevron_left
-                </span>
-            </a>
-            <a class="navLogo" href="">Feed</a>
-        </nav>
-    </section>
-
-    <!--  -->
-    <section class="viewMain">
-        <!-- Image -->
-        <div style="background-image: url('public/images/1\ \(13\).jpg');background-size: contain;"></div>
-
-
-        <!-- Information -->
-        <div class="viewInfo">
-            <div style="display: flex; justify-content: space-between; padding: 2rem;">
-
-
-                <div
-                    style="display:flex; flex-direction:column; justify-content:space-evenly; color:white;padding: 10px;">
-                    <h1 class="ItemName" style="font-size: 20px; margin-bottom: 10px;">Name of Item</h1>
-                    <h2 clas="ItemDescription"
-                        style="font-size: 15px;margin-bottom: 10px;font-weight: 100;font-family: 'Montserrat';">Why?
-                    </h2>
-                </div>
-
-                <div style="position: relative;top:-55px;right: 10px;">
-
-                    <a href="home.html" class="viewBtn">
-                        <span class="material-icons">
-                            brush
-                        </span>
-                    </a>
-
-
-                </div>
-
-            </div>
-        </div>
-        <!-- Line -->
-        <div style="display:flex;justify-content: end;position: relative;bottom: 0;">
-            <hr class="line">
-        </div>
-
-
-        </div>
+<body id="view" class="single is-preload">
 
 
 
+	<!-- Header -->
+	<header id="header">
+		<a class="headerA" href="index.html">؇</a>
+
+		<nav class="links">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a id="Trade" href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<nav class="Navmain" style="">
+			<ul style="width: 100%;">
+				<li class="search" style="display:flex;Justify-content:center;align-items:center;width:100%;">
+					<span class="material-icons">
+						search
+					</span>
+					<form id="search" method="get" action="#">
+						<input type="text" name="query" placeholder="Search" />
+					</form>
+				</li>
+
+				<li href="#" class="menu" style="display:flex;Justify-content:center;align-items:center;width:100%;">
+					<span style="display:flex;justify-content: center;align-items:center;width: 100%;"
+						class="material-icons">
+						restaurant_menu
+					</span>
+				</li>
+				</a>
+				</li>
+			</ul>
+		</nav>
+
+	</header>
 
 
-        <!-- Btn Bottom Done -->
-        <div
-            style="display: flex; justify-content: center; place-content: center;align-items: center;padding-bottom: 1rem;">
 
-            <a href="home.html" class="viewBtn">
-                <span class="material-icons">
-                    done
-                </span>
-            </a>
+	<div style="display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    padding-right: 1rem;
+    color: white;" class="parallax"">
 
-        </div>
+<h1 id=" productStrain" style="background-color: black;padding: 1rem;color: white;font-size: 3rem;font-weight: 100;">
+		Indoor</h1>
 
-    </section>
+	</div>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
 
-    <script src="js/index.js"></script>
+
+		<!-- Intro -->
+		<section id="intro">
+			<a href="#" class="logo"><img src="./assets/images/imageAd.jpg" alt="" /></a>
+		</section>
+
+
+		<!-- Menu -->
+		<section id="menu">
+
+			<!-- Search -->
+			<section>
+				<form class="search" method="get" action="#">
+					<input type="text" name="query" placeholder="Search" />
+				</form>
+			</section>
+
+			<!-- Links
+							<section>
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3>Lorem ipsum</h3>
+											<p>Feugiat tempus veroeros dolor</p>
+										</a>
+									</li>
+					
+			
+								</ul>
+							</section> -->
+
+		</section>
+
+		<!-- Main -->
+		<div id="main" style="display: flex;justify-content: center;flex-direction: column;text-align: center;">
+
+			<h1 id="productName" style="font-size: 3rem;font-weight: 100; letter-spacing: 10px;color: black;"></h1>
+			<p id="productInfo" style="font-weight: bold;font-size: 2rem;"> </p>
+
+
+
+			<form class="frmBB" style="">
+				<label for="fname">Name</label><br>
+				<input type="text" id="fname" name="fname"><br>
+				<label for="lname">Message</label><br>
+				<input type="text" id="message" name="message" value="">
+			</form>
+
+
+			<a style="    margin: auto;
+				width: 100%;
+				display: block;
+				color: white;
+				padding: 1rem;
+				font-weight: 100;
+				background-color: #3f3f3f;" href="#" onclick="Send()">Order</a>
+
+		</div>
+
+
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		// Get the data by key
+		let productId = JSON.parse(localStorage.getItem('clikedID'));
+		console.log(productId);
+		console.log(dbItems);
+		document.getElementById('productName').innerHTML = dbItems[productId].Title;
+		document.getElementById('productInfo').innerHTML = dbItems[productId].Info;
+
+		function Send() {
+			var text = document.getElementById('fname');
+			var msg = document.getElementById('message');
+			console.log(text.value);
+			window.location = ("https://api.telegram.org/bot5211315802:AAFuzWQh4QzHXkhsnllIMw9CA0SvYi_D0KU/sendMessage?chat_id=5170008110&text=" + " Hey Kamogelo you have a message: \n"+"Customer Name: " + text.value +"\n Message: " +  msg.value);
+		}
+
+		// 5170008110 chat id
+		// 5211315802:AAFuzWQh4QzHXkhsnllIMw9CA0SvYi_D0KU token
+		// https://api.telegram.org/bot<TOKEN>/sendMessage?chat_id=<CHAT_ID>&text=Hello%20World Command
+
+
+	</script>
 
 
 </body>

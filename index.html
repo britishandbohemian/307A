@@ -1,89 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>index</title>
+<!DOCTYPE HTML>
+<html>
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-
-    <!-- Materia;l IOcons -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      type="text/css"
-      rel="stylesheet"
-    />
-    <link
-      rel="preconnect"
-      type="text/css"
-      href="https://fonts.googleapis.com"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Body Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-      type="text/css"
-      crossorigin
-    />
-
-    <!-- Logo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Milonga&display=swap"
-      rel="stylesheet"
-    />
-    <script type="text/javascript" src="app.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
-
-    <style>
-      .BBh1{
-        text-align: center;
-        color: white;
-font-weight: 100;
-letter-spacing: 10px;
-        text-transform: uppercase;
-        margin: 1rem 0 5rem 0;
-      }
-    </style>
-
-    <script>
-      function Home() {
-        window.location = 'home.html';
-      }
-    </script>
+<head>
+	<title>Home</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style>
+		.gradient {
+			grid-template-columns: auto auto;
+			background: white;
+			background-size: 400% 400%;
+			animation: gradient 1s cubic-bezier(.79, .14, .15, .86) infinite;
+		}
+	</style>
 
 
-  </head>
+</head>
 
-  <body
-    style="
-      background-color: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    "
-  >
 
-    <div class="container">
-      <div class="center">
 
-        <h4 class="BBh1">Welcome</h4>
-        <button id="welcome" class="btn" onclick="Home()">
-          <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-          </svg>
-          <span style="font-weight: 500;">Go</span>
-        </button>
-      </div>
-    </div>
+<body id="home" class="is-preload gradient ">
 
-    
-  </body>
+	<!-- Sidebar -->
+	<section id="sidebar">
+
+		<!-- Intro -->
+		<section id="intro">
+			<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+			<header>
+				<h1 id="H" style="font-size: 2rem;text-align: center;">Welcome</h1>
+				<p style="padding: 0.5rem;font-weight: 500;text-align: center;">307 A, Welcome to the highburry experience </p>
+				<a style="margin:auto;width: 50%;display: block;color: white;padding:1rem;background-color:black;"
+					href="https://www.news24.com/News24/concourt-rules-that-personal-use-of-dagga-is-not-a-criminal-offence-20180918">Article of the day</a>
+			</header>
+		</section>
+
+	
+	</section>
+
+	<!-- Wrapper -->
+	<div style="background-color:transparent" id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a class="headerA" href="index.html">؇</a>
+
+			<nav class="links">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li>
+						<a id="Trade" target="_blank" href="">
+							Send A Message
+						   </a></li>
+				</ul>
+			</nav>
+
+
+			<nav class="Navmain" >
+				<ul style="width: 100%;">
+					<li class="search"
+						style="display:flex;Justify-content:center;align-items:center;width:100%;">
+						<span class="material-icons">
+							search
+						</span>
+						<form id="search" method="get" action="#">
+							<input type="text" name="query" placeholder="Search" />
+						</form>
+					</li>
+
+					<li href="#" class="menu"
+						style="display:flex;Justify-content:center;align-items:center;width:100%;"> <span
+							style="display:flex;justify-content: center;align-items:center;width: 100%;"
+							class="material-icons">
+							restaurant_menu
+						</span></li>
+					</a>
+					</li>
+				</ul>
+			</nav>
+			
+		</header>
+
+
+
+		<!-- Menu -->
+		<section id="menu">
+
+			<!-- Search -->
+			<section>
+				<form class="search" method="get" action="#">
+					<input type="text" name="query" placeholder="Search" />
+				</form>
+			</section>
+
+			<!-- Links -->
+			<section>
+				<ul class="links">
+					<li>
+						<a href="#">
+							<h3>Gallery</h3>
+							<p>Explore the world of cannabis</p>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Actions -->
+			<section>
+				<ul class="actions stacked">
+					<li><a href="#" class="button large fit">Log In</a></li>
+				</ul>
+			</section>
+
+		</section>
+
+		<!-- Main -->
+		<div id="Stories">
+
+		</div>
+
+
+
+	</div>
+
+
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/view.js"></script>
+
+
+</body>
+
+
+
 </html>
