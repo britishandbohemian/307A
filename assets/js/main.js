@@ -95,22 +95,21 @@
 
 var dbItems = [
 	{
-		"Title": "Rocket Pocket",
+		"Title": "Cheese",
 		"Tags": "",
 		"Info": "20 ZAR",
-		"date": "In Stock",
-		"date": "In Stock"
+		"StoreName": "Maboneng CBD Shop",
 	}
 ];
 
 var today = new Date();
 var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
-function Post(T, SBT, MI) {
+function Post(T, SBT, ST) {
 	this.Title = T;
 	this.SubTitle = SBT;
 	this.DatePublished = date;
-	this.MoreInformation = MI;
+	this.ST = ST;
 	this.ImagePath = "assets/images/" + getRndInteger() + ".jpg";
 }
 
@@ -152,8 +151,8 @@ function loadData() {
 				<p style="color: black;">${element.Tags}</p>
 			</div>
 			<div class="meta">
-				<time style="font-family:Nanum Myeongjo;" id="DateTime" class="published" datetime="2015-11-01">${date}</time>
-				<a href="#" class="author"><span class="name">Kamogelo Mosia</span>
+				<h4  id="DateTime" class="published" datetime="2015-11-01">${ST}</h4>
+				<a href="#" class="author"><span class="name">"Maboneng"</span>
 				<img class="author img" style="background-image:url('${imagePathBio}')"> 
 						</a>
 			</div>
