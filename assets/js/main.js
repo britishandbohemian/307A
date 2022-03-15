@@ -95,11 +95,22 @@
 
 var dbItems = [
 	{
-		"Title": "Rocket Pocket",
+		"Title": "Item name",
 		"Tags": "",
-		"Info": "20 ZAR",
+		"Info": "Price",
 		"date": "In Stock",
-		"date": "In Stock"
+	},
+	{
+		"Title": "Item name",
+		"Tags": "",
+		"Info": "Price",
+		"date": "In Stock",
+	},
+	{
+		"Title": "Item name",
+		"Tags": "",
+		"Info": "Price",
+		"date": "In Stock",
 	}
 ];
 
@@ -145,23 +156,27 @@ function loadData() {
 		dbItems.forEach(element => {
 			var imagePath = GenImage();
 			var imagePathBio = GenBioImage();
-			let HtmlSegment = `<article style="box-shadow: rgb(230 230 230) 0px 0px 0px 1px inset, rgb(255 255 255 / 67%) 0px 0px 0px 1px;" id="${index}"  onclick="ItemClick(this.id)" class="post">
-		<header class="postHeader">
-			<div class="title">
-				<h2 style="letter-spacing:0.5px;"><a href="#" style="font-family:Nanum Myeongjo;font-size:1rem">${element.Title}</a></h2>
-				<p style="color: black;">${element.Tags}</p>
-			</div>
-			<div class="meta">
-				<time style="font-family:Nanum Myeongjo;" id="DateTime" class="published" datetime="2015-11-01">${date}</time>
-				<a href="#" class="author"><span class="name">Kamogelo Mosia</span>
-				<img class="author img" style="background-image:url('${imagePathBio}')"> 
-						</a>
-			</div>
-		</header>
-
-		<p style="color: black;font-weight:400;font-size:25px;text-align:center;font-family:Nanum Myeongjo;"> ${element.Info}</p>
-		<a href="#" style="min-height:250px;" class="image featured" id="${index}" onclick="ItemClick(this.id)"><img src="${imagePath}" alt="" /></a>
-		</article>`;
+			let HtmlSegment = `
+			<article style="box-shadow: rgb(230 230 230) 0px 0px 0px 1px inset, rgb(255 255 255 / 67%) 0px 0px 0px 1px;" id="${index}"  onclick="ItemClick(this.id)" class="post">
+				<header class="postHeader">
+					<div class="title">
+						<h2 style="letter-spacing:0.5px;"><a href="#" style="font-size:1.5rem;font-weight:300">${element.Title}</a></h2>
+						<p style="color: black;">${element.Tags}</p>
+					</div>
+					<div class="meta">
+						
+						<a href="#" class="author"><span class="name">Shop Name</span>
+						<img class="author img" style="background-image:url('${imagePathBio}')"> 
+								</a>
+					</div>
+				</header>
+		
+				<p style="    color: black;
+				font-weight: bold;
+				font-size: 35px;
+				text-align: center;"> ${element.Info}</p>
+				<a href="#" style="min-height:250px;" class="image featured" id="${index}" onclick="ItemClick(this.id)"><img src="${imagePath}" alt="" /></a>
+				</article>`;
 			index++;
 			insertionDiv.innerHTML += HtmlSegment;
 		});
