@@ -92,21 +92,93 @@
 })(jQuery);
 
 
+
+var numberOfShops = -1;
 // db
 var shopInfoDB = [
+	// Shops
 	{
+		"shopID": "1",
 		"shopName": "Name Of Shop",
 		"shopNumberOfItems": "2",
 		"shopContactInfo": "061 183 9982",
-		"shopImage": "In Stock",
-		"shopProducts": [],
+		"shopImage": "./assets/shops/shop_1/bio/bio.jpg",
+		"shopProducts": [
+			{
+				"ProductName": "Art One",
+				"ProductInfo": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod eum cupiditate, natus obcaecati, sed aliquam possimus minima laboriosam nihil officiis quam architecto autem sit libero quae accusamus provident facere accusantium?",
+				"ProductPrice": "Price",
+				"ProductImage": "./assets/shops/shop_1/products/1 (1).jpg",
+				"ProductID": "1"
+			},
+			{
+				"ProductName": "Art Two",
+				"ProductInfo": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod eum cupiditate, natus obcaecati, sed aliquam possimus minima laboriosam nihil officiis quam architecto autem sit libero quae accusamus provident facere accusantium?",
+				"ProductPrice": "Price",
+				"ProductImage": "./assets/shops/shop_1/products/1 (2).jpg",
+				"ProductID": "2"
+			}
+		],
 	}
 ];
 
+
+function loadData() {
+
+	if (document.URL.includes("index.html")) {
+
+		console.log("Bro")
+
+		var insertionDiv = document.getElementById('Stories');
+		var index = 0;
+
+	
+// entire shop array
+		shopInfoDB.forEach(shop => {
+		
+// Products in shop
+			shop.shopProducts.forEach(product => {
+				let HtmlSegment = `
+				<article style="box-shadow: rgb(230 230 230) 0px 0px 0px 1px inset, rgb(255 255 255 / 67%) 0px 0px 0px 1px;" id="${product.id}"  onclick="ItemClick(this.id)" class="post">
+					<header class="postHeader">
+						<div class="title">
+							<h2 style="letter-spacing:0.5px;"><a href="#" style="font-size:1.5rem;font-weight:300">${product.ProductName}</a></h2>
+							<p style="color: black;">${product.ProductInfo}</p>
+							<p style="    color: black;
+							font-weight: bold;
+							font-size: 35px;
+							text-align: center;"> ${product.ProductPrice}</p>
+						</div>
+						<div class="meta">
+							
+							<a href="#" class="author"><span class="name">Shop Name</span>
+							<img class="author img" style="background-image:url('${shop.shopImage}')"> 
+									</a>
+
+							
+						</div>
+					</header>
+			
+				
+					<a href="#" style="min-height:250px;" class="image featured" id="${index}" onclick="ItemClick(this.id)"><img src="${product.ProductImage}" alt="" /></a>
+					</article>`;
+			insertionDiv.innerHTML += HtmlSegment;
+
+			});
+
+		});
+
+	} else {
+
+	}
+
+}
+
+
 // Product blueprint
 
-class Product  {
-	constructor(cProductName,cProductPrice,cProductImage,cProductOwner){
+class Product {
+	constructor(cProductName, cProductPrice, cProductImage, cProductOwner) {
 		this.ProductName = cProductName;
 		this.ProductPrice = cProductPrice;
 		this.ProductImage = cProductImage;
@@ -116,17 +188,16 @@ class Product  {
 }
 
 // shop Blue print
-class Shop{
-	constructor(shopName,shopNumberOfItems, shopProducts = [],shopContactInfo,shopImage){
-		this.shopName = shopName;
+class Shop {
+	constructor(shopInfoDB) {
+		numberOfShops +=1;
+		this.shopName = shopInfoDB[numberOfShops];
 		this.shopNumberOfItems = shopNumberOfItems;
 
-for (let index = 0; index < shopNumberOfItems; index++) {
-	shopProducts[index] = new Product();
-	
-}
+		for (let index = 0; index < shopNumberOfItems; index++) {
+			shopProducts[index] = new Product();
 
-
+		}
 	}
 
 }
@@ -152,52 +223,6 @@ function GenImage() {
 
 
 
-function loadData() {
-
-	if (document.URL.includes("index.html") ) {
-
-		console.log("Bro")
-
-		var insertionDiv = document.getElementById('Stories');
-		var index = 0;
-
-		dbItems.forEach(element => {
-			var imagePath = GenImage();
-			var imagePathBio = GenBioImage();
-		
-			let HtmlSegment = `
-			<article style="box-shadow: rgb(230 230 230) 0px 0px 0px 1px inset, rgb(255 255 255 / 67%) 0px 0px 0px 1px;" id="${index}"  onclick="ItemClick(this.id)" class="post">
-				<header class="postHeader">
-					<div class="title">
-						<h2 style="letter-spacing:0.5px;"><a href="#" style="font-size:1.5rem;font-weight:300">${element.Title}</a></h2>
-						<p style="color: black;">${element.Tags}</p>
-					</div>
-					<div class="meta">
-						
-						<a href="#" class="author"><span class="name">Shop Name</span>
-						<img class="author img" style="background-image:url('${imagePathBio}')"> 
-								</a>
-					</div>
-				</header>
-		
-				<p style="    color: black;
-				font-weight: bold;
-				font-size: 35px;
-				text-align: center;"> ${element.Info}</p>
-				<a href="#" style="min-height:250px;" class="image featured" id="${index}" onclick="ItemClick(this.id)"><img src="${imagePath}" alt="" /></a>
-				</article>`;
-
-			index++;
-			insertionDiv.innerHTML += HtmlSegment;
-		});
-
-		console.log("Ran")
-	} else {
-
-	}
-
-}
-
 
 
 function dollarsToRand(amonuntInRands) {
@@ -208,17 +233,17 @@ function RandTodollars(amonuntInDollars) {
 	return dollars = amonuntInDollars * 15.37;
 }
 +
-function LogTrade() {
-	document.getElementById('Trade').innerHTML = "150 ZAR IS NOW " + dollarsToRand(150)
-}
+	function LogTrade() {
+		document.getElementById('Trade').innerHTML = "150 ZAR IS NOW " + dollarsToRand(150)
+	}
 
 
 
 
-function ItemClick(id){
-if (document.URL.includes("index.html")) {
-localStorage.setItem('clikedID',JSON.stringify(id));
-window.location = 'view.html';
+function ItemClick(id) {
+	if (document.URL.includes("index.html")) {
+		localStorage.setItem('clikedID', JSON.stringify(id));
+		window.location = 'view.html';
 	}
 
 }

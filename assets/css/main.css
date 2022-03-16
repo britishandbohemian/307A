@@ -2903,8 +2903,9 @@ ul.posts article header> :last-child {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    justify-content: space-between;
-    margin: -3em 0 3em 0;
+    justify-content: space-evenly;
+    margin: -3em 0 3em 0; 
+	width: auto;
 }
 
 .post>header .title {
@@ -3112,14 +3113,14 @@ ul.posts article header> :last-child {
 	.post {
 		padding: 1.5em 1.5em 0em 1.5em;
 		left: -1.5em;
-		margin: 0 0 2em 0;
+		margin: 0 0 5em 0;
 		width: calc(100% + (1.5em * 2));
 	}
 
 	.post>header {
 		display: flex;
 		justify-content: center;
-		padding: 3em 5em 0.5em 5em;
+		padding: 3em 1em 1em 1em;
 		margin: -1.5em 0 1.5em 0;
 
 	}
