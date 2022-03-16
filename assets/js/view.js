@@ -1,6 +1,6 @@
 console.log(productID);
 	var id = document.getElementById('productName');
-    id.innerHTML = dbItems[productID].Title;
+    id.innerHTML = shopInfoDB[shop].Title;
 
 
 	var info = document.getElementById('productInfo');

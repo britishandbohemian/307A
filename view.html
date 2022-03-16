@@ -43,42 +43,82 @@
 <body id="view" class="single is-preload">
 
 
+		<!-- Header -->
+		<header id="header" style="background-image: url('./assets/images/bgNav.jpg');">
+			<a style="" href="index.html">؇</a>
 
-	<!-- Header -->
-	<header id="header">
-		<a class="headerA" href="index.html">؇</a>
+			<nav class="links">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li>
+						<a id="Trade" target="_blank" href="">
+							Contact Us
+						   </a></li>
+				</ul>
+			</nav>
 
-		<nav class="links">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a id="Trade" href="#">Contact Us</a></li>
-			</ul>
-		</nav>
 
-		<nav class="Navmain" style="">
-			<ul style="width: 100%;">
-				<li class="search" style="display:flex;Justify-content:center;align-items:center;width:100%;">
-					<span class="material-icons">
-						search
-					</span>
-					<form id="search" method="get" action="#">
-						<input type="text" name="query" placeholder="Search" />
-					</form>
-				</li>
+			<nav class="Navmain" >
+				<ul style="width: 100%;">
+					<!-- <li class="search"
+						style="display:flex;Justify-content:center;align-items:center;width:100%;">
+						<span class="material-icons">
+							search
+						</span>
+						<form id="search" method="get" action="#">
+							<input type="text" name="query" placeholder="Search" />
+						</form>
+					</li> -->
 
-				<li href="#" class="menu" style="display:flex;Justify-content:center;align-items:center;width:100%;">
-					<span style="display:flex;justify-content: center;align-items:center;width: 100%;"
-						class="material-icons">
-						restaurant_menu
-					</span>
-				</li>
-				</a>
-				</li>
-			</ul>
-		</nav>
+					<li href="#" class="menu"
+						style="display:flex;Justify-content:center;align-items:center;width:100%;"> <a href="#menu">
 
-	</header>
+							<span
+							style="display:flex;justify-content: center;align-items:center;width: 100%;color:white;"
+							class="material-icons">
+							restaurant_menu
+						</span>
 
+						</a> </li>
+					</a>
+					</li>
+				</ul>
+			</nav>
+			
+		</header>
+
+
+
+		<!-- Menu -->
+		<section id="menu">
+
+			<!-- Search -->
+			<section>
+				<form class="search" method="get" action="#">
+					<input type="text" name="query" placeholder="Search" />
+				</form>
+			</section>
+
+			<!-- Links -->
+			<section>
+				<ul class="links">
+					<li>
+						<a href="#">
+							<h3>Gallery</h3>
+							<p>Explore the world of cannabis</p>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Actions -->
+			<section>
+				<ul class="actions stacked">
+					<li><a href="#" class="button large fit">Log In </a></li>
+				</ul>
+			</section>
+
+		</section>
 
 
 	<div style="display: flex;
@@ -89,10 +129,18 @@
     padding-right: 1rem;
     color: white;" class="parallax"">
 
-<h1 id=" productStrain" style="background-color: black;padding: 1rem;color: white;font-size: 3rem;font-weight: 100;">
-		Indoor</h1>
+<h1 id=" productStrain" style="background-color: black;
+padding: 1rem;
+color: white;
+font-size: 25px;
+letter-spacing: 15px;
+font-weight: 100;
+width: 37vw;">
+		view</h1>
 
 	</div>
+
+
 	<!-- Wrapper -->
 	<div id="wrapper">
 
@@ -168,18 +216,29 @@
 	<script src="assets/js/main.js"></script>
 	<script>
 		// Get the data by key
-		let productId = JSON.parse(localStorage.getItem('clikedID'));
+		let shopID = JSON.parse(localStorage.getItem('shopID'));
+		let productID = JSON.parse(localStorage.getItem('productID'));
+
+
 		console.log(productId);
 		console.log(dbItems);
-		document.getElementById('productName').innerHTML = dbItems[productId].Title;
-		document.getElementById('productInfo').innerHTML = dbItems[productId].Info;
+
+
+		document.getElementById('productName').innerHTML = shopInfoDB[shopID].shopProducts[productID].ProductName;
+		document.getElementById('productInfo').innerHTML = shopInfoDB[shopID].shopProducts[productID].ProductInfo;
 
 		function Send() {
 			var text = document.getElementById('fname');
 			var msg = document.getElementById('message');
 			console.log(text.value);
-			window.location = ("https://api.telegram.org/bot5211315802:AAFuzWQh4QzHXkhsnllIMw9CA0SvYi_D0KU/sendMessage?chat_id=5170008110&text=" + " Hey Kamogelo you have a message: \n"+"Customer Name: " + text.value +"\n Message: " +  msg.value);
+
+			fetch('https://api.telegram.org/bot5211315802:AAFuzWQh4QzHXkhsnllIMw9CA0SvYi_D0KU/sendMessage?chat_id=5170008110&text=" + " Hey Kamogelo you have a message: \n"+"Customer Name: " + text.value +"\n Message: " +  msg.value);')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
 		}
+
+
 
 		// 5170008110 chat id
 		// 5211315802:AAFuzWQh4QzHXkhsnllIMw9CA0SvYi_D0KU token

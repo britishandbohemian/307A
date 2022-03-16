@@ -2902,10 +2902,11 @@ ul.posts article header> :last-child {
 	display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
-    display: flex;
+    grid-template-columns: auto auto;
+    display: grid;
     justify-content: space-evenly;
-    margin: -3em 0 3em 0; 
-	width: auto;
+    margin: -3em 0 3em 0;
+    width: auto;
 }
 
 .post>header .title {
@@ -3523,10 +3524,7 @@ justify-content: space-evenly;
 }
 
 #Stories{
-	display: grid;
-
-	justify-content: space-between;
-	grid-template-rows: auto;
+	display: flex;
 }
 
 body.is-menu-visible #wrapper {

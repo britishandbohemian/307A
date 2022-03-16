@@ -95,7 +95,7 @@
 
 var numberOfShops = -1;
 // db
-var shopInfoDB = [
+let shopInfoDB = [
 	// Shops
 	{
 		"shopID": "1",
@@ -119,7 +119,8 @@ var shopInfoDB = [
 				"ProductID": "2"
 			}
 		],
-	}
+	},
+	
 ];
 
 
@@ -139,7 +140,7 @@ function loadData() {
 // Products in shop
 			shop.shopProducts.forEach(product => {
 				let HtmlSegment = `
-				<article style="box-shadow: rgb(230 230 230) 0px 0px 0px 1px inset, rgb(255 255 255 / 67%) 0px 0px 0px 1px;" id="${product.id}"  onclick="ItemClick(this.id)" class="post">
+				<article style="box-shadow: rgb(230 230 230) 0px 0px 0px 1px inset, rgb(255 255 255 / 67%) 0px 0px 0px 1px;" id="${shop.shopID}"  onclick="ItemClick(${shop.shopID},${product.ProductID})" class="post">
 					<header class="postHeader">
 						<div class="title">
 							<h2 style="letter-spacing:0.5px;"><a href="#" style="font-size:1.5rem;font-weight:300">${product.ProductName}</a></h2>
@@ -240,9 +241,10 @@ function RandTodollars(amonuntInDollars) {
 
 
 
-function ItemClick(id) {
+function ItemClick(shopID,productID) {
 	if (document.URL.includes("index.html")) {
-		localStorage.setItem('clikedID', JSON.stringify(id));
+		localStorage.setItem('shopID', JSON.stringify(shopID));
+		localStorage.setItem('productID', JSON.stringify(productID));
 		window.location = 'view.html';
 	}
 
