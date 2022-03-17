@@ -118,7 +118,16 @@ let shopInfoDB = [
 				"ProductImage": "./assets/shops/shop_1/products/1 (2).jpg",
 				"ProductID": "2"
 			}
+			,
+			{
+				"ProductName": "B Grade ",
+				"ProductInfo": "Ras Trends Create New Store",
+				"ProductPrice": "80 ZAE",
+				"ProductImage": "./assets/shops/shop_1/products/1 (3).jpg",
+				"ProductID": "3"
+			}
 		],
+		
 	},
 	
 ];
